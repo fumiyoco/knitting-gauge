@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Knitting Gauge Converter</title>
+        <link href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <h1>Knitting Gauge Converter</h1>
+            <p>Oftern times my gauge is different from what a pattern calls for.  
+                This calculator does the math for me.</p>
+            <form>
+                <div><label>Original Gauge</label>
+                    <sub>Number of stiches per 10 cm/4 inch in the original pattern</sub>
+                    <input type="number" name="og"/>
+                </div>
+                <div>
+                    <label>New Gauge</label>
+                    <sub>Number of stiches per 10 cm/4 inch with my swatch using my yarn and needle size</sub>
+                    <input type="number" name="ng"/>
+                </div>
+                <div>
+                    <label>Original Cast On stiches</label>
+                    <sub>Number of cast ons in the original pattern</sub>
+                    <input type="number" name="oc"/>
+                </div>
+                <input type="button" value="calculate" onclick="convert(this.form)"/>
+            </form>
+            <p class="result">Your new number of cast on stitch is: <span name="newGauge" class="highlight"></span></p>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
